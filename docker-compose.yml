@@ -8,5 +8,5 @@ services:
             - ./reverse-proxy.conf:/etc/nginx/conf.d/reverse-proxy.conf
             - ./nginx.conf:/etc/nginx/nginx.conf
         ports:
-            80:80
+            - 80:80
 
