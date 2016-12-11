@@ -1,0 +1,10 @@
+version: '2'
+services:
+    # receive http connection from client
+    web:
+        image: nginx
+        restart: always
+        volumes:
+            - ./reverse-proxy.conf:/etc/nginx/conf.d/reverse-proxy.conf
+            - ./nginx.conf:/etc/nginx/nginx.conf
+
